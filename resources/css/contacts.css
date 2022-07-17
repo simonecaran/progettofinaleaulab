@@ -1,0 +1,32 @@
+.contact-text {
+    position: relative;
+}
+
+.contact-text:hover {
+    color: white;
+}
+
+.contact-text::before { 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    color: white;
+  }
+  
+  .contact-text:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: white;
+  }
+  
+  .contact-text::before {
+    content: " ";
+    color: white;
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: linear-gradient(90deg, #FF0091, #0072FF);
+    z-index: -1;
+    transition: transform .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+

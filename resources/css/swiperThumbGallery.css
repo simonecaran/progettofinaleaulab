@@ -1,0 +1,20 @@
+     .swiperThumbGallery2 {
+        height: 65%;
+        width: 100%;
+      }
+
+      .swiperThumbGallery {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+
+      .swiperThumbGallery .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .swiperThumbGallery .swiper-slide-thumb-active {
+        opacity: 1;
+      }

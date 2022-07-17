@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: 'nima_linebold';
+    src: url('/fonts/NIMAsolid-bold.woff2') format('woff2'),
+         url('/fonts/NIMAsolid-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-family: 'nima_linebold';
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}

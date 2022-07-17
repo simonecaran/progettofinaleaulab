@@ -1,0 +1,212 @@
+.navbar {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    height: 80px!important;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #FAFAFA;
+    width: 100%;
+}
+
+
+.text-login  {
+    font-size: 0.8rem;
+    color:#4D4D4D;
+    /* display: none; */
+}
+/* .img-login:hover + .text-login{
+    display: block;
+} */
+
+
+.logo {
+    margin-left: 20px;
+}
+
+
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    background-color: #F2F2F2;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: rgb(251, 251, 251);
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.sidebarMenuInner li a{
+    color: #4D4D4D;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    right: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #4D4D4D;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+
+
+/* hover */
+
+.title {
+    position: relative;
+}
+
+.title:hover {
+    color: white;
+}
+
+.title::before { 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    color: white;
+  }
+  
+  .title:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: white;
+  }
+  
+  .title::before {
+    content: " ";
+    color: white;
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: linear-gradient(90deg, #FF0091, #0072FF);
+    z-index: -1;
+    transition: transform .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  /* fine hover */
+
+  /* media queries */
+
+  @media (max-width: 768px) { 
+      .logo {
+        width: 50%;
+      }
+      .sidebarMenuInner li{
+        font-size:large;
+    }
+      .icon-nav{
+        display: none;
+      }
+      
+      .img-login {
+        width: 8%;
+        position: absolute;
+        right: 45px;
+      }
+
+      .img-login:hover + .text-login {
+        display: block;
+        margin: 30px 20px;
+    }
+
+   }
+  /* fine media queries */
